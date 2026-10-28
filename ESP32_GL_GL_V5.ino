@@ -79,10 +79,10 @@ int dusk=0;
 int dawn=0;
 
 // --- Configuration Constants ---
-const char* ssid     = "espdevnet";
-const char* password = "ac6e882db2";
+const char* ssid     = "yourSSID";
+const char* password = "yourPassword";
 const char* HOSTNAME  = "ESP32_GL_GL_AI_V5";
-const char* SYSLOG_HOST =   "192.168.1.235"; 
+const char* SYSLOG_HOST =   "192.168.xxx.xxx"; 
 const int SYSLOG_PORT     = 514;
 const int UDP_PORT        = 9095;
 
@@ -141,7 +141,7 @@ String getUptimeString();
 void setup() {
     Serial.begin(115200);
       
-      pinMode(2,OUTPUT);
+      pinMode(2,OUTPUT);          //onboard LED
       digitalWrite(2,HIGH);
       
       if(!initWiFi() ) {
